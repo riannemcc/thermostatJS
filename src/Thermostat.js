@@ -8,3 +8,7 @@ Thermostat.prototype.getCurrentTemp = function(){
 Thermostat.prototype.increase = function(){
   this._temperature += 1;
 };
+
+Thermostat.prototype.decrease = function(){
+  this._temperature -= 1;
+};
