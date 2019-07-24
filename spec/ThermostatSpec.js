@@ -17,5 +17,12 @@ describe('Thermostat', function(){
     expect(thermostat.getCurrentTemp()).toEqual(19);
   });
 
+  it('prevents temperature from being decreased to less than 10', function(){
+    var step;
+    for(let step = 0; step < 10; step++) {
+      thermostat.decrease();
+    }
+    expect(function(){ thermostat.decrease();}).toThrowError('cannot decrease the temperature below 10');
+  })
 
 });

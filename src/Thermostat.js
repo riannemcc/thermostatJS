@@ -10,5 +10,8 @@ Thermostat.prototype.increase = function(){
 };
 
 Thermostat.prototype.decrease = function(){
-  this._temperature -= 1;
+  if(this.getCurrentTemp() === 10 ){
+    throw new Error('cannot decrease the temperature below 10');
+  }
+    this._temperature -= 1;
 };
