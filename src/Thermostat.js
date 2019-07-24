@@ -30,7 +30,10 @@ Thermostat.prototype.currentUsage = function(){
     return 'low-usage';
   }
   else if((this.getCurrentTemp() > 18) && (this.getCurrentTemp() < 25)){
-    return 'medium-usage'};
+    return 'medium-usage'}
+  else {
+    return 'high-usage'
+  };
 };
 
 Thermostat.prototype.powerSavingModeOn = function(){

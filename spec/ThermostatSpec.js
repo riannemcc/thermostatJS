@@ -43,6 +43,11 @@ describe('current energy usage', function(){
     thermostat._temperature = 20;
     expect(thermostat.currentUsage()).toEqual('medium-usage')
   });
+
+  it('reports high-usage when usage > 25', function(){
+    thermostat._temperature = 26;
+    expect(thermostat.currentUsage()).toEqual('high-usage')
+  });
 });
 
   describe('Power Saving Mode', function() {
