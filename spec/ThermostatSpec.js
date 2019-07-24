@@ -28,6 +28,23 @@ describe('Thermostat', function(){
     expect(function(){ thermostat.decrease();}).toThrowError('cannot decrease the temperature below 10');
   })
 
+  it('allows the temperature to be reset to 20', function(){
+    thermostat.reset();
+    expect(thermostat.getCurrentTemp()).toEqual(20);
+  });
+
+describe('current energy usage', function(){
+  it('reports low-usage when usage less than 18', function(){
+    thermostat._temperature = 17;
+    expect(thermostat.currentUsage()).toEqual('low-usage')
+  });
+
+  it('reports medium-usage when usage 18 > 25', function(){
+    thermostat._temperature = 20;
+    expect(thermostat.currentUsage()).toEqual('medium-usage')
+  });
+});
+
   describe('Power Saving Mode', function() {
     it('Sets max temperature to 25 when ON', function(){
       thermostat.powerSavingModeOn();

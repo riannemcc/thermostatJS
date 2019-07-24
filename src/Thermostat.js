@@ -21,10 +21,21 @@ Thermostat.prototype.decrease = function(){
     this._temperature -= 1;
 };
 
+Thermostat.prototype.reset = function(){
+  this._temperature = 20
+};
+
+Thermostat.prototype.currentUsage = function(){
+  if(this.getCurrentTemp() < 18 ){
+    return 'low-usage';
+  }
+  else if((this.getCurrentTemp() > 18) && (this.getCurrentTemp() < 25)){
+    return 'medium-usage'};
+};
+
 Thermostat.prototype.powerSavingModeOn = function(){
   this._powerSavingMode = 'ON';
   this._maxTemperature = 25;
-
 };
 
 Thermostat.prototype.powerSavingModeOff = function(){
