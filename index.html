@@ -1,21 +1,43 @@
 <!DOCTYPE html>
 
 <html>
-  <title>
     <head>
-      <link rel="stylesheet" type="text/css" href="style.css"/>
-    </head>
-  </title>
+      <link rel="stylesheet" type="text/css" href="public/style.css" />
+      <title>Thermostat</title>
+      <script src="jquery.js"></script>
+      <style>
+        div {
+        width:300px;
+        margin: auto;
+        border: 2px solid #E5DEE1;
+      }
+      </style>
+  </head>
   <body>
-    <script src="jquery.js"></script>
-    <center><h1>Hottie McHottie</h1></center>
-    <center><h1 id="temperature"></h1></center>
-      <p><button id="temp-increase">+</button>
-      <button id="temp-decrease">-</button></p>
-      <p><button id="temp-reset">Reset</button></p>
-      <p>Power saving mode is <span id="power-saving-status">on</span></p>
-      <button id="power_saving_on">Power Saving On</button>
-      <button id="power_saving_off">Power Saving Off</button>
+    <section>
+      <h2>Current temperature: <span id="current-temperature"></span></h2>
+        <select class="button" id="current-city">
+        <option value="london">London</option>
+        <option value="New York,US">New York</option>
+        <option value="Paris">Paris</option>
+        <option value="Berlin">Berlin</option>
+        <option value="Tokyo">Tokyo</option>
+        <option value="Sydney">Sydney</option>
+    </select>
+    </section>
+
+    <section>
+      <h1>Hottie McHottie</h1>
+      <h1 id="temperature"></h1>
+        <div><center><p><button class="button" id="temp-increase">+</button>
+          <button class="button" id="temp-decrease">-</button></p>
+          <p><button class="button" id="temp-reset">Reset</button></p>
+          </center></div>
+          <div><center><p><h3>Power saving mode is <span id="power-saving-status">on</span></h3></p>
+          <button class="button" id="power_saving_on">Power Saving On</button>
+          <button class="button" id="power_saving_off">Power Saving Off</button>
+          </center></div>
+    </section>
     <script src="src/Thermostat.js"></script>
     <script src="interface.js"></script>
   </body>
