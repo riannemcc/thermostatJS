@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <title>Hottie McHottie</title>
-  </head>
+  <title>
+    <head>
+      <link rel="stylesheet" type="text/css" href="style.css"/>
+    </head>
+  </title>
   <body>
-    <h1>Hottie McHottie</h1>
-    <h1 id=temperature></h1>
-    <p>
-      <p><button id="temperature_increase">Increase</button></p>
-      <p><button id="temperature_decrease">Decrease</button></p>
-      <p><button id="temperature_reset">Reset</button></p>
+    <script src="jquery.js"></script>
+    <center><h1>Hottie McHottie</h1></center>
+    <center><h1 id="temperature"></h1></center>
+      <p><button id="temp-increase">+</button>
+      <button id="temp-decrease">-</button></p>
+      <p><button id="temp-reset">Reset</button></p>
       <p>Power saving mode is <span id="power-saving-status">on</span></p>
       <button id="power_saving_on">Power Saving On</button>
       <button id="power_saving_off">Power Saving Off</button>
-    </p>
     <script src="src/Thermostat.js"></script>
+    <script src="interface.js"></script>
   </body>
 </html>
